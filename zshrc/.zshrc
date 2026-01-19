@@ -47,6 +47,26 @@
   bindkey '^[[1;5D' backward-word
   bindkey '^H' backward-kill-word
 
+# Copy file content to clipboard
+cpc() {
+  if [[ -t 0 ]]; then
+    [[ -f "$1" ]] || { echo "Usage: cpc <file>"; return 1; }
+    xclip -selection clipboard -i < "$1" >/dev/null 2>&1 &
+  else
+    xclip -selection clipboard -i >/dev/null 2>&1 &
+  fi
+}
+
+# Open file or directory in VS Code
+co() {
+  if [[ -z "$1" ]]; then
+    code . >/dev/null 2>&1 &
+  else
+    code "$1" >/dev/null 2>&1 &
+  fi
+}
+
+
   # History settings
   HISTSIZE=5000
   HISTFILE=~/.zsh_history
