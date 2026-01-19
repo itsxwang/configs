@@ -1,8 +1,8 @@
 -- =========================================================
 -- LEADER KEYS (MUST BE FIRST)
 -- =========================================================
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- =========================================================
 -- DISABLE UNUSED PROVIDERS (FASTER STARTUP)
