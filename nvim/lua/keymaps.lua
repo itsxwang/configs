@@ -4,7 +4,6 @@ local map = vim.keymap.set
 map("n", "<leader>fs", "<cmd>w<CR>", { desc = "Save file" })
 map("n", "<leader>fq", "<cmd>q<CR>", { desc = "Quit" })
 map("n", "<leader>fQ", "<cmd>q!<CR>", { desc = "Force quit" })
-map("n", "<leader>fw", "<cmd>wq!<CR>", { desc = "Force quit and save" })
 map("n", "<leader>fn", "<cmd>enew<CR>", { desc = "New file" })
 
 -- 📦 Buffer (<leader>b)
@@ -38,3 +37,31 @@ map("n", "<leader>lh", vim.lsp.buf.hover, { desc = "Hover docs" })
 map("n", "<leader>lf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format code" })
+
+
+
+-- some `ci` placements with leader key
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
+-- Quotes
+keymap("n", '<leader>"', 'ci"', opts)   -- inside double quotes
+keymap("n", "<leader>'", "ci'", opts)   -- inside single quotes
+keymap("n", "<leader>`", "ci`", opts)   -- inside backticks
+
+-- Brackets
+keymap("n", "<leader>(", "ci(", opts)
+keymap("n", "<leader>{", "ci{", opts)
+keymap("n", "<leader>[", "ci[", opts)
+keymap("n", "<leader><", "ci<", opts)
+
+-- Replace AROUND (delete quotes/brackets too)
+-- Quotes
+keymap("n", '<leader>a"', 'ca"', opts)
+keymap("n", "<leader>a'", "ca'", opts)
+keymap("n", "<leader>a`", "ca`", opts)
+
+-- Brackets
+keymap("n", "<leader>a(", "ca(", opts)
+keymap("n", "<leader>a{", "ca{", opts)
+keymap("n", "<leader>a[", "ca[", opts)
+keymap("n", "<leader>a<", "ca<", opts)
