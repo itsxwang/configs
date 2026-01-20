@@ -125,8 +125,7 @@
   },
   {
     "key": "ctrl+`",
-    "command": "workbench.action.terminal.new",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "command": "workbench.action.terminal.new"
   },
   {
     "key": "space t k",
