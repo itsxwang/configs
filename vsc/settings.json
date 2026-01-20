@@ -63,9 +63,7 @@
       ]
     }
   ],
-
   "vim.handleKeys": {
-    "<Space>": false
+    "<space>": false
   }
-
 }
