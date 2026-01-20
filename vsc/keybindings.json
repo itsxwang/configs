@@ -128,9 +128,8 @@
     "command": "workbench.action.terminal.new"
   },
   {
-    "key": "space t k",
+    "key": "alt+k",
     "command": "workbench.action.terminal.kill",
-    "when": "vim.mode == 'Normal' && terminalFocus"
   },
   // 🚨 Problems panel (Diagnostics) 
   {
