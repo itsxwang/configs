@@ -128,7 +128,7 @@
     "command": "workbench.action.terminal.focusPrevious"
   },
   {
-    "key": "ctrl+`",
+    "key": "alt+n",
     "command": "workbench.action.terminal.new",
   },
   {
