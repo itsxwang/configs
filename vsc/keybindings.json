@@ -1,6 +1,10 @@
 // 🔑 Navigation (hjkl-style panels)
 [
   {
+    "key": "space",
+    "command": "-vim.remap"
+  },
+  {
     "key": "ctrl-h",
     "command": "workbench.action.navigateLeft"
   },
@@ -20,95 +24,95 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 💾 Files
   {
     "key": "space f s",
     "command": "workbench.action.files.save",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space f f",
     "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 📄 Buffers (tabs)
   {
     "key": "space b d",
     "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 🧠 LSP / Code (matches Neovim exactly)
   {
     "key": "space c a",
     "command": "editor.action.codeAction",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space c r",
     "command": "editor.action.rename",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space c s",
     "command": "workbench.action.gotoSymbol",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 🧭 Go-to (LSP navigation)
   {
     "key": "space g d",
     "command": "editor.action.revealDefinition",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space g r",
     "command": "editor.action.goToReferences",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space g i",
     "command": "editor.action.goToImplementation",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 🔍 Search
   {
     "key": "space s g",
     "command": "workbench.action.findInFiles",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 🌱 Git
   {
     "key": "space g g",
     "command": "workbench.view.scm",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 🐞 Debug
   {
     "key": "space d b",
     "command": "editor.debug.action.toggleBreakpoint",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space d c",
     "command": "workbench.action.debug.continue",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // ⚡ Command palette (critical)
   {
     "key": "space space",
     "command": "workbench.action.showCommands",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal'"
   },
   // terminal
   {
@@ -125,7 +129,7 @@
   },
   {
     "key": "ctrl+`",
-    "command": "workbench.action.terminal.new"
+    "command": "workbench.action.terminal.new",
   },
   {
     "key": "alt+k",
@@ -135,7 +139,7 @@
   {
     "key": "space m",
     "command": "workbench.actions.view.problems",
-    "when": "vim.mode == 'Normal' && editorTextFocus" 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // 📁 Explorer file operations (Vim-like)
   {
@@ -175,4 +179,287 @@
     "key": "ctrl+x",
     "command": "editor.action.clipboardCutAction",
   },
+  {
+    "key": "ctrl+l",
+    "command": "expandLineSelection",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // Split editor
+  {
+    "key": "space s h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space s v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  //  🔹 Change INSIDE quotes / brackets (ci)
+  {
+    "key": "space shift+'",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "\""
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space '",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "'"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space `",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "`"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+9",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "("
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+0",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        ")"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+[",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "{"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+]",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "}"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space [",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "["
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space ]",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "]"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+,",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        "<"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space shift+.",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "i",
+        ">"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  // 🔹 Change AROUND quotes / brackets (ca)
+  {
+    "key": "space a shift+'",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "\""
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a '",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "'"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a `",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "`"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+9",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "("
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+0",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        ")"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+[",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "{"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+]",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "}"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a [",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "["
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a ]",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "]"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+,",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        "<"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  {
+    "key": "space a shift+.",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "c",
+        "a",
+        ">"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  }
+
 ]
