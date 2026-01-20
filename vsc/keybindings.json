@@ -184,6 +184,19 @@
     "command": "expandLineSelection",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
+  {
+    "key": "ctrl+a",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "g",
+        "g",
+        "V",
+        "G"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
   // Split editor
   {
     "key": "space s h",
@@ -461,5 +474,4 @@
     },
     "when": "vim.mode == 'Normal' && !terminalFocus"
   }
-
 ]
