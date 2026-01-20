@@ -1,4 +1,3 @@
-
 {
   "editor.accessibilitySupport": "on",
   "glassit.alpha": 255,
@@ -50,6 +49,23 @@
       "+": "clipboard",
       "*": "clipboard"
     }
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-a>"
+      ],
+      "after": [
+        "g",
+        "g",
+        "V",
+        "G"
+      ]
+    }
+  ],
+
+  "vim.handleKeys": {
+    "<Space>": false
   }
 
 }

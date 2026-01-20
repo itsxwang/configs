@@ -20,95 +20,95 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 💾 Files
   {
     "key": "space f s",
     "command": "workbench.action.files.save",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space f f",
     "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 📄 Buffers (tabs)
   {
     "key": "space b d",
     "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 🧠 LSP / Code (matches Neovim exactly)
   {
     "key": "space c a",
     "command": "editor.action.codeAction",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space c r",
     "command": "editor.action.rename",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space c s",
     "command": "workbench.action.gotoSymbol",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 🧭 Go-to (LSP navigation)
   {
     "key": "space g d",
     "command": "editor.action.revealDefinition",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space g r",
     "command": "editor.action.goToReferences",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space g i",
     "command": "editor.action.goToImplementation",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 🔍 Search
   {
     "key": "space s g",
     "command": "workbench.action.findInFiles",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 🌱 Git
   {
     "key": "space g g",
     "command": "workbench.view.scm",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 🐞 Debug
   {
     "key": "space d b",
     "command": "editor.debug.action.toggleBreakpoint",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space d c",
     "command": "workbench.action.debug.continue",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // ⚡ Command palette (critical)
   {
     "key": "space space",
     "command": "workbench.action.showCommands",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // terminal
   {
@@ -126,23 +126,18 @@
   {
     "key": "ctrl+`",
     "command": "workbench.action.terminal.new",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   {
     "key": "space t k",
     "command": "workbench.action.terminal.kill",
     "when": "vim.mode == 'Normal' && terminalFocus"
   },
-  {
-    "key": "space m",
-    "command": "workbench.actions.view.problems",
-    "when": "vim.mode == 'Normal'"
-  },
   // 🚨 Problems panel (Diagnostics) 
   {
     "key": "space m",
     "command": "workbench.actions.view.problems",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus" 
   },
   // 📁 Explorer file operations (Vim-like)
   {
@@ -164,30 +159,6 @@
   {
     "key": "shift+alt+f",
     "command": "editor.action.formatDocument",
-  },
-  {
-    "key": "ctrl+k",
-    "command": "cursorUp",
-  },
-  {
-    "key": "ctrl+j",
-    "command": "cursorDown",
-  },
-  {
-    "key": "ctrl+h",
-    "command": "cursorLeft",
-  },
-  {
-    "key": "ctrl+l",
-    "command": "cursorRight",
-  },
-  {
-    "key": "ctrl+space",
-    "command": "editor.action.triggerParameterHints",
-  },
-  {
-    "key": "ctrl+a",
-    "command": "editor.action.selectAll",
   },
   {
     "key": "ctrl+c",
