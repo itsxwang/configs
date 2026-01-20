@@ -1,0 +1,55 @@
+
+{
+  "editor.accessibilitySupport": "on",
+  "glassit.alpha": 255,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "files.autoSave": "afterDelay",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "editor.pasteAs.preferences": [],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.mouseWheelZoom": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "relative",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": true,
+  "vim.overridePaste": true,
+  "vim.clipboard": {
+    "copy": {
+      "+": "clipboard",
+      "*": "clipboard"
+    },
+    "paste": {
+      "+": "clipboard",
+      "*": "clipboard"
+    }
+  }
+
+}
