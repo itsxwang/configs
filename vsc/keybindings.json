@@ -473,5 +473,11 @@
       ]
     },
     "when": "vim.mode == 'Normal' && !terminalFocus"
+  },
+  // hover functionality
+  {
+    "key": "space h",
+    "command": "editor.action.showHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   }
 ]
