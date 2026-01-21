@@ -1,0 +1,385 @@
+// 🔑 Navigation (hjkl-style panels)
+[
+  {
+    "key": "ctrl-h",
+    "command": "workbench.action.navigateLeft",
+    "when": "neovim.mode == 'normal'" // because ctrl-h in insert mode can be use with normal find functionality of vscode 
+  },
+  {
+    "key": "ctrl-j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl-k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl-l",
+    "command": "workbench.action.navigateRight"
+  },
+  // 📁 Explorer (Neovim-like)
+  {
+    "key": "alt+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+  // 💾 Files
+  {
+    "key": "space f s",
+    "command": "workbench.action.files.save",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space f f",
+    "command": "workbench.action.quickOpen",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 📄 Buffers (tabs)
+  {
+    "key": "space b d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 🧠 LSP / Code (matches Neovim exactly)
+  {
+    "key": "space c a",
+    "command": "editor.action.codeAction",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space c r",
+    "command": "editor.action.rename",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space c s",
+    "command": "workbench.action.gotoSymbol",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 🧭 Go-to (LSP navigation)
+  {
+    "key": "space g d",
+    "command": "editor.action.revealDefinition",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space g t",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space g r",
+    "command": "editor.action.goToReferences",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space g i",
+    "command": "editor.action.goToImplementation",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 🔍 Search
+  {
+    "key": "space s g",
+    "command": "workbench.action.findInFiles",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 🌱 Git (use this command for something else because we usually use git from terminal)
+  {
+    "key": "space g g",
+    "command": "workbench.view.scm",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 🐞 Debug
+  {
+    "key": "space d b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space d c",
+    "command": "workbench.action.debug.continue",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space d s",
+    "command": "workbench.action.debug.stepInto",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space d o",
+    "command": "workbench.action.debug.stepOver",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space d r",
+    "command": "workbench.action.debug.restart",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "space d q",
+    "command": "workbench.action.debug.stop",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // ⚡ Command palette (critical)
+  {
+    "key": "space space",
+    "command": "workbench.action.showCommands",
+    "when": "neovim.mode == 'normal'"
+  },
+  // terminal
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.new",
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.kill",
+  },
+  // 🚨 Problems panel (Diagnostics) 
+  {
+    "key": "space m",
+    "command": "workbench.actions.view.problems",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // 📁 Explorer file operations (Vim-like)
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  },
+  // shortcut that should work like normal 
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+  },
+  {
+    "key": "ctrl+c",
+    "command": "editor.action.clipboardCopyWithSyntaxHighlightingAction",
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "ctrl+right",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "cursorBeforeGhostText && inlineSuggestionVisible && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.clipboardCutAction",
+  },
+  {
+    "key": "ctrl+a",
+    "command": "editor.action.selectAll",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "expandLineSelection",
+    "when": "neovim.mode !=='normal' && editorTextFocus"
+  },
+  // Split editor
+  {
+    "key": "space s h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "neovim.mode == 'normal' && !terminalFocus"
+  },
+  {
+    "key": "space s v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "neovim.mode == 'normal' && !terminalFocus"
+  },
+  // hover functionality
+  {
+    "key": "space h",
+    "command": "editor.action.showHover",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // Open recent 
+  {
+    "key": "space r",
+    "command": "workbench.action.openRecent",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  // ci/ca shorcuts using <leader> 
+  {
+    "key": "space '",
+    "command": "vscode-neovim.send",
+    "args": "ci'",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a '",
+    "command": "vscode-neovim.send",
+    "args": "ca'",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci" / ca" ───────────────────────────────────────────────────────────────
+  {
+    "key": "space shift+'",
+    "command": "vscode-neovim.send",
+    "args": "ci\"",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+'",
+    "command": "vscode-neovim.send",
+    "args": "ca\"",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci` / ca` ───────────────────────────────────────────────────────────────
+  {
+    "key": "space `",
+    "command": "vscode-neovim.send",
+    "args": "ci`",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a `",
+    "command": "vscode-neovim.send",
+    "args": "ca`",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci( / ci) / ca( / ca) ───────────────────────────────────────────────────
+  {
+    "key": "space shift+9",
+    "command": "vscode-neovim.send",
+    "args": "ci(",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space shift+0",
+    "command": "vscode-neovim.send",
+    "args": "ci)",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+9",
+    "command": "vscode-neovim.send",
+    "args": "ca(",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+0",
+    "command": "vscode-neovim.send",
+    "args": "ca)",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci{ / ci} / ca{ / ca} ───────────────────────────────────────────────────
+  {
+    "key": "space shift+[",
+    "command": "vscode-neovim.send",
+    "args": "ci{",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space shift+]",
+    "command": "vscode-neovim.send",
+    "args": "ci}",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+[",
+    "command": "vscode-neovim.send",
+    "args": "ca{",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+]",
+    "command": "vscode-neovim.send",
+    "args": "ca}",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci[ / ci] / ca[ / ca] ───────────────────────────────────────────────────
+  {
+    "key": "space [",
+    "command": "vscode-neovim.send",
+    "args": "ci[",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space ]",
+    "command": "vscode-neovim.send",
+    "args": "ci]",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a [",
+    "command": "vscode-neovim.send",
+    "args": "ca[",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a ]",
+    "command": "vscode-neovim.send",
+    "args": "ca]",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ── ci< / ci> / ca< / ca> ───────────────────────────────────────────────────
+  {
+    "key": "space shift+,",
+    "command": "vscode-neovim.send",
+    "args": "ci>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space shift+.",
+    "command": "vscode-neovim.send",
+    "args": "ci>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+,",
+    "command": "vscode-neovim.send",
+    "args": "ca>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "space a shift+.",
+    "command": "vscode-neovim.send",
+    "args": "ca>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // ctrl+h should still work
+  {
+    "key": "ctrl+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "neovim.mode !== 'normal'"
+  }
+]
