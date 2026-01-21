@@ -91,7 +91,7 @@
     "command": "workbench.action.findInFiles",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-  // 🌱 Git
+  // 🌱 Git (use this command for something else because we usually use git from terminal)
   {
     "key": "space g g",
     "command": "workbench.view.scm",
@@ -153,6 +153,11 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
     "key": "ctrl+shift+m",
     "command": "-workbench.actions.view.problems",
     "when": "workbench.panel.markers.view.active"
@@ -183,19 +188,6 @@
     "key": "ctrl+l",
     "command": "expandLineSelection",
     "when": "vim.mode != 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "ctrl+a",
-    "command": "vim.remap",
-    "args": {
-      "after": [
-        "g",
-        "g",
-        "V",
-        "G"
-      ]
-    },
-    "when": "vim.mode == 'Normal' && !terminalFocus"
   },
   // Split editor
   {
@@ -479,5 +471,5 @@
     "key": "space h",
     "command": "editor.action.showHover",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-  }
+  },
 ]
