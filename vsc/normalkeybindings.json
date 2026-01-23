@@ -294,6 +294,11 @@
     "key": "ctrl+x"
   },
   {
+    "command": "editor.action.copyLinesDownAction",
+    "key": "ctrl+d",
+    "when": "neovim.mode !== 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
     "command": "editor.action.selectAll",
     "key": "ctrl+a"
   },
