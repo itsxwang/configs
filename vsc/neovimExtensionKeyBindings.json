@@ -27,6 +27,12 @@
     "key": "space f s",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
+  {
+    "key": "space f shift+q",
+    "command": "vscode-neovim.send",
+    "args": [":q!\n"],
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
   // 📄 Buffers (tabs)
   {
     "command": "workbench.action.nextEditorInGroup",
@@ -129,7 +135,7 @@
     "key": "space d q",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // manage files, tabs, windows etc  
+  // manage files, tabs, windows etc
   {
     "command": "workbench.action.showCommands",
     "key": "space o",
@@ -179,11 +185,11 @@
   },
   {
     "command": "workbench.action.closeActiveEditor",
-    "key": "ctrl+w",
+    "key": "ctrl+w"
   },
   {
     "key": "ctrl+k",
-    "command": "workbench.action.closeOtherEditors",
+    "command": "workbench.action.closeOtherEditors"
   },
 
   // terminal
@@ -207,7 +213,7 @@
     "command": "workbench.action.terminal.kill",
     "key": "alt+l"
   },
-  // 🚨 Problems panel (Diagnostics) 
+  // 🚨 Problems panel (Diagnostics)
   {
     "command": "workbench.actions.view.problems",
     "key": "space m",
@@ -254,7 +260,7 @@
     "key": "ctrl+shift+m",
     "when": "workbench.panel.markers.view.active"
   },
-  // shortcut that should work like normal 
+  // shortcut that should work like normal
   {
     "command": "editor.action.formatDocument",
     "key": "shift+alt+f"
@@ -286,13 +292,13 @@
     "key": "shift+k",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // Open recent 
+  // Open recent
   {
     "command": "workbench.action.openRecent",
     "key": "space r",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // ci/ca shorcuts using <leader> 
+  // ci/ca shorcuts using <leader>
   {
     "args": "ci'",
     "command": "vscode-neovim.send",
@@ -437,7 +443,7 @@
     "key": "ctrl+e",
     "when": "neovim.mode !== 'normal'"
   },
-  // cursorhome and cursorend 
+  // cursorhome and cursorend
   {
     "command": "cursorHome",
     "key": "space h",
