@@ -231,7 +231,7 @@
   // terminal
   {
     "command": "workbench.action.terminal.toggleTerminal",
-    "key": "alt+h"
+    "key": "alt+e"
   },
   {
     "command": "workbench.action.terminal.focusNext",
