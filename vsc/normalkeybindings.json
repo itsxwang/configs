@@ -200,7 +200,7 @@
     "key": "ctrl+w",
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+g",
     "command": "workbench.action.closeOtherEditors",
   },
   // terminal
