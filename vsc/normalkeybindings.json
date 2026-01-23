@@ -196,6 +196,27 @@
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
+    "key": "space m u",
+    "command": "workbench.action.moveEditorToAboveGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m d",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m r",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m l",
+    "command": "workbench.action.moveEditorToLeftGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  
+  {
     "command": "workbench.action.increaseViewWidth",
     "key": "space i w",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
@@ -231,7 +252,7 @@
   // terminal
   {
     "command": "workbench.action.terminal.toggleTerminal",
-    "key": "alt+h"
+    "key": "alt+e"
   },
   {
     "command": "workbench.action.terminal.focusNext",
@@ -253,6 +274,14 @@
   {
     "command": "workbench.actions.view.problems",
     "key": "alt+m",
+  },
+  {
+    "command": "workbench.action.output.toggleOutput",
+    "key": "alt+o",
+  },
+  {
+    "key": "alt+d",
+    "command": "workbench.debug.action.toggleRepl"
   },
   // 📁 Explorer file operations (Vim-like)
   {
@@ -502,7 +531,7 @@
     "when": "editorTextFocus && neovim.init && (neovim.mode == 'normal' || neovim.mode == 'visual')  && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "key": "alt-e",
+    "key": "alt-y",
     "command": "workbench.action.files.newUntitledFile"
   },
   // path
@@ -515,5 +544,5 @@
     "command": "copyRelativeFilePath",
     "key": "space shift+p",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  }
+  },
 ]
