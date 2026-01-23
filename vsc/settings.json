@@ -33,37 +33,13 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.lineNumbers": "relative",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "vim.useSystemClipboard": true,
-  "vim.overrideCopy": true,
-  "vim.overridePaste": true,
-  "vim.clipboard": {
-    "copy": {
-      "+": "clipboard",
-      "*": "clipboard"
-    },
-    "paste": {
-      "+": "clipboard",
-      "*": "clipboard"
-    }
+  "vscode-neovim.neovimExecutablePaths.linux": "/snap/nvim/current/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/xxxxx/.config/nvim/init.lua",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   },
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-a>"
-      ],
-      "after": [
-        "g",
-        "g",
-        "V",
-        "G"
-      ]
-    }
-  ],
-  "vim.handleKeys": {
-    "<space>": false
-  }
+  "editor.lineNumbers": "relative",
 }
