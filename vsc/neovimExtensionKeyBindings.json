@@ -196,6 +196,27 @@
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
+    "key": "space m u",
+    "command": "workbench.action.moveEditorToAboveGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m d",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m r",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "space m l",
+    "command": "workbench.action.moveEditorToLeftGroup",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  
+  {
     "command": "workbench.action.increaseViewWidth",
     "key": "space i w",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
@@ -340,6 +361,17 @@
     "key": "shift+k",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
+  {
+    "command": "editor.action.increaseHoverVerbosityLevel",
+    "key": "space i v",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "command": "editor.action.decreaseHoverVerbosityLevel",
+    "key": "space d v",
+    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+
   // Open recent 
   {
     "command": "workbench.action.openRecent",
