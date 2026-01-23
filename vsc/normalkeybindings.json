@@ -104,7 +104,7 @@
   // show debug hover
   {
     "command": "editor.debug.action.showDebugHover",
-    "key": "space d h",
+    "key": "space d k",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
@@ -196,6 +196,31 @@
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
+    "command": "workbench.action.increaseViewWidth",
+    "key": "space i w",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "command": "workbench.action.decreaseViewWidth",
+    "key": "space d w",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "command": "workbench.action.increaseViewHeight",
+    "key": "space i h",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "command": "workbench.action.decreaseViewHeight",
+    "key": "space d h",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "key": "space m g",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
     "command": "workbench.action.closeActiveEditor",
     "key": "ctrl+w",
   },
@@ -227,10 +252,9 @@
   // 🚨 Problems panel (Diagnostics) 
   {
     "command": "workbench.actions.view.problems",
-    "key": "space m",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+m",
   },
-  // � Explorer file operations (Vim-like)
+  // 📁 Explorer file operations (Vim-like)
   {
     "command": "explorer.newFile",
     "key": "a",
