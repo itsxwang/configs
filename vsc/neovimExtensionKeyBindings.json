@@ -58,9 +58,9 @@
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "command": "workbench.action.gotoSymbol",
-    "key": "space c s",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "ctrl+shift+o",
+    "command": "editor.action.accessibleViewGoToSymbol",
+    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
   },
   // 🧭 Go-to (LSP navigation)
   {
@@ -527,5 +527,5 @@
     "key": "ctrl+n",
     "command": "inlineChat.start",
     "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook'"
-  },
+  }
 ]
