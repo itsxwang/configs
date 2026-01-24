@@ -1,23 +1,21 @@
 -- =========================================================
--- LEADER KEYS (MUST BE FIRST)
+-- leader keys (must be first)
 -- =========================================================
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
 -- =========================================================
--- DISABLE UNUSED PROVIDERS (FASTER STARTUP)
+-- disable unused providers (faster startup)
 -- =========================================================
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 
 -- =========================================================
--- BASIC NVIM EDITOR SETTINGS (from old init.lua)
--- =========================================================
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Case-Insensitive search by default
+-- case-insensitive search by default
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -29,22 +27,22 @@ vim.opt.mouse = "a"
 vim.opt.termguicolors = true
 
 -- =========================================================
--- TRANSPARENT BACKGROUND / TERMINAL COLORS
+-- transparent background / terminal colors
 -- =========================================================
 vim.cmd([[
-  hi Normal guibg=NONE
-  hi NormalNC guibg=NONE
-  hi EndOfBuffer guibg=NONE
-  hi LineNr guibg=NONE
-  hi SignColumn guibg=NONE
+  hi normal guibg=none
+  hi normalnc guibg=none
+  hi endofbuffer guibg=none
+  hi linenr guibg=none
+  hi signcolumn guibg=none
 ]])
 
 -- =========================================================
--- CLIPBOARD (SYSTEM CLIPBOARD BY DEFAULT)
+-- clipboard (system clipboard by default)
 -- =========================================================
 vim.opt.clipboard = "unnamedplus"
 
--- Explicit xclip provider (Linux/X11)
+-- explicit xclip provider (linux/x11)
 if vim.fn.has("unix") == 1 and vim.fn.executable("xclip") == 1 then
     vim.g.clipboard = {
         name = "xclip",
@@ -59,31 +57,31 @@ if vim.fn.has("unix") == 1 and vim.fn.executable("xclip") == 1 then
         cache_enabled = true
     }
 
-    -- Reload clipboard provider
+    -- reload clipboard provider
     vim.g.loaded_clipboard_provider = nil
     vim.cmd("runtime autoload/provider/clipboard.vim")
 end
 
 -- =========================================================
--- BASIC KEYMAPS (ESSENTIALS)
+-- basic keymaps (essentials)
 -- =========================================================
-vim.keymap.set("n", "<leader>w", ":w<CR>", {
-    desc = "Save file"
+vim.keymap.set("n", "<leader>w", ":w<cr>", {
+    desc = "save file"
 })
-vim.keymap.set("n", "<leader>q", ":q<CR>", {
-    desc = "Quit"
+vim.keymap.set("n", "<leader>q", ":q<cr>", {
+    desc = "quit"
 })
-vim.keymap.set("n", "<leader>x", ":x<CR>", {
-    desc = "Save & quit"
+vim.keymap.set("n", "<leader>x", ":x<cr>", {
+    desc = "save & quit"
 })
 
--- Fix common typos (:W, :Q, etc.)
-for _, c in ipairs({{"Q", "q"}, {"W", "w"}, {"Wq", "wq"}, {"WQ", "wq"}, {"Qa", "qa"}, {"QA", "qa"}}) do
-    vim.api.nvim_create_user_command(c[1], c[2], {})
-end
+-- fix common typos (:w, :q, etc.)
+-- for _, c in ipairs({{"q", "q"}, {"w", "w"}, {"wq", "wq"}, {"wq", "wq"}, {"qa", "qa"}, {"qa", "qa"}}) do
+   --  vim.api.nvim_create_user_command(c[1], c[2], {})
+-- end
 
 -- =========================================================
--- BOOTSTRAP lazy.nvim
+-- bootstrap lazy.nvim
 -- =========================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -95,7 +93,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- =========================================================
--- LOAD PLUGINS
+-- load plugins
 -- =========================================================
 require("lazy").setup("plugins", {
     rocks = {
@@ -104,6 +102,6 @@ require("lazy").setup("plugins", {
 })
 
 -- =========================================================
--- LOAD EXTRA KEYMAPS (modular)
+-- load extra keymaps (modular)
 -- =========================================================
 require("keymaps")

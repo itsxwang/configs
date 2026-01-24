@@ -342,10 +342,6 @@
     "when": "cursorBeforeGhostText && inlineSuggestionVisible && textInputFocus && !editorReadonly"
   },
   {
-    "command": "editor.action.clipboardCutAction",
-    "key": "ctrl+x"
-  },
-  {
     "command": "editor.action.copyLinesDownAction",
     "key": "ctrl+d",
     "when": "neovim.mode !== 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
@@ -357,8 +353,8 @@
   // hover functionality
   {
     "command": "editor.action.showHover",
-    "key": "shift+k",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+s",
+    "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "editor.action.increaseHoverVerbosityLevel",
@@ -479,11 +475,6 @@
   },
   // addSelectionToNextFindMatch, ctrl+n
   {
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl-n",
-    "when": "editorTextFocus && neovim.init && (neovim.mode == 'normal' || neovim.mode == 'visual')  && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
     "key": "alt-y",
     "command": "workbench.action.files.newUntitledFile"
   },
@@ -524,8 +515,44 @@
   },
   // copilot inline
   {
-    "key": "ctrl+n",
+    "key": "alt+g",
     "command": "inlineChat.start",
-    "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook'"
-  }
+  },
+  // send `:noh` command on alt+x
+  {
+    "key": "alt+x",
+    "command": "vscode-neovim.send",
+    "args": ":noh",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "vscode-neovim.send",
+    "args": "<C-n>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "vscode-neovim.send",
+    "args": "<C-x>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "vscode-neovim.send",
+    "args": "<C-c>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+DownArrow",
+    "command": "vscode-neovim.send",
+    "args": "<C-Down>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+UpArrow",
+    "command": "vscode-neovim.send",
+    "args": "<C-Up>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
 ]

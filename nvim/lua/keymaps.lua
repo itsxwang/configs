@@ -38,15 +38,14 @@ map("n", "<leader>lf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format code" })
 
-
-
--- some `ci` placements with leader key
+-- ✏️ `ci` placements with leader key
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
+
 -- Quotes
-keymap("n", '<leader>"', 'ci"', opts)   -- inside double quotes
-keymap("n", "<leader>'", "ci'", opts)   -- inside single quotes
-keymap("n", "<leader>`", "ci`", opts)   -- inside backticks
+keymap("n", '<leader>"', 'ci"', opts)
+keymap("n", "<leader>'", "ci'", opts)
+keymap("n", "<leader>`", "ci`", opts)
 
 -- Brackets
 keymap("n", "<leader>(", "ci(", opts)
