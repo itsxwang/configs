@@ -467,6 +467,16 @@
     "args": "g$",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
+  {
+    "command": "cursorHome",
+    "key": "ctrl-i",
+    "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "cursorEnd",
+    "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  },
   // addSelectionToNextFindMatch, ctrl+n
   {
     "command": "editor.action.addSelectionToNextFindMatch",
@@ -511,5 +521,11 @@
   {
     "key": "shift+alt+a",
     "command": "editor.action.blockComment",
-  }
+  },
+  // copilot inline
+  {
+    "key": "ctrl+n",
+    "command": "inlineChat.start",
+    "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook'"
+  },
 ]
