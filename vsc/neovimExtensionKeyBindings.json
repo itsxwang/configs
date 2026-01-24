@@ -215,7 +215,6 @@
     "command": "workbench.action.moveEditorToLeftGroup",
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  
   {
     "command": "workbench.action.increaseViewWidth",
     "key": "space i w",
@@ -280,7 +279,7 @@
     "key": "alt+o",
   },
   {
-    "key": "alt+d",
+    "key": "alt+f",
     "command": "workbench.debug.action.toggleRepl"
   },
   // 📁 Explorer file operations (Vim-like)
@@ -371,53 +370,34 @@
     "key": "space d v",
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-
   // Open recent 
   {
     "command": "workbench.action.openRecent",
     "key": "space r",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // ci/ca shorcuts using <leader> 
+  // ci shorcuts using <leader> 
   {
     "args": "ci'",
     "command": "vscode-neovim.send",
     "key": "space '",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca'",
-    "command": "vscode-neovim.send",
-    "key": "space a '",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci" / ca" ───────────────────────────────────────────────────────────────
+  // ── ci" ───────────────────────────────────────────────────────────────
   {
     "args": "ci\"",
     "command": "vscode-neovim.send",
     "key": "space shift+'",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca\"",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+'",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci` / ca` ───────────────────────────────────────────────────────────────
+  // ── ci` ───────────────────────────────────────────────────────────────
   {
     "args": "ci`",
     "command": "vscode-neovim.send",
     "key": "space `",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca`",
-    "command": "vscode-neovim.send",
-    "key": "space a `",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci( / ci) / ca( / ca) ───────────────────────────────────────────────────
+  // ── ci( / ci) ───────────────────────────────────────────────────
   {
     "args": "ci(",
     "command": "vscode-neovim.send",
@@ -430,19 +410,7 @@
     "key": "space shift+0",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca(",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+9",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "args": "ca)",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+0",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci{ / ci} / ca{ / ca} ───────────────────────────────────────────────────
+  // ── ci{ / ci} ───────────────────────────────────────────────────
   {
     "args": "ci{",
     "command": "vscode-neovim.send",
@@ -455,19 +423,7 @@
     "key": "space shift+]",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca{",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+[",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "args": "ca}",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+]",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci[ / ci] / ca[ / ca] ───────────────────────────────────────────────────
+  // ── ci[ / ci] ───────────────────────────────────────────────────
   {
     "args": "ci[",
     "command": "vscode-neovim.send",
@@ -480,19 +436,7 @@
     "key": "space ]",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  {
-    "args": "ca[",
-    "command": "vscode-neovim.send",
-    "key": "space a [",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "args": "ca]",
-    "command": "vscode-neovim.send",
-    "key": "space a ]",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // ── ci< / ci> / ca< / ca> ───────────────────────────────────────────────────
+  // ── ci< / ci> ───────────────────────────────────────────────────
   {
     "args": "ci>",
     "command": "vscode-neovim.send",
@@ -503,18 +447,6 @@
     "args": "ci>",
     "command": "vscode-neovim.send",
     "key": "space shift+.",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "args": "ca>",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+,",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "args": "ca>",
-    "command": "vscode-neovim.send",
-    "key": "space a shift+.",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   // replace in insert mode
@@ -556,4 +488,13 @@
     "key": "space shift+p",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
+  // GOTO: Beofre & after postiong of cursor 
+  {
+    "command": "workbench.action.navigateBack",
+    "key": "alt+a"
+  },
+  {
+    "command": "workbench.action.navigateForward",
+    "key": "alt+d"
+  }
 ]

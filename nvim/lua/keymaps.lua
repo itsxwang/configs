@@ -57,19 +57,3 @@ keymap("n", "<leader>[", "ci[", opts)
 keymap("n", "<leader>]", "ci]", opts)
 keymap("n", "<leader><", "ci<", opts)
 keymap("n", "<leader>>", "ci>", opts)
-
--- Replace AROUND (delete quotes/brackets too)
--- Quotes
-keymap("n", '<leader>a"', 'ca"', opts)
-keymap("n", "<leader>a'", "ca'", opts)
-keymap("n", "<leader>a`", "ca`", opts)
-
--- Brackets
-keymap("n", "<leader>a(", "ca(", opts)
-keymap("n", "<leader>a)", "ca)", opts)
-keymap("n", "<leader>a{", "ca{", opts)
-keymap("n", "<leader>a}", "ca}", opts)
-keymap("n", "<leader>a[", "ca[", opts)
-keymap("n", "<leader>a]", "ca]", opts)
-keymap("n", "<leader>a<", "ca<", opts)
-keymap("n", "<leader>a>", "ca>", opts)
