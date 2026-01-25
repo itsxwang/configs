@@ -58,9 +58,8 @@
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "key": "ctrl+shift+o",
-    "command": "editor.action.accessibleViewGoToSymbol",
-    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+    "key": "alt+s",
+    "command": "workbench.action.gotoSymbol",
   },
   // 🧭 Go-to (LSP navigation)
   {
@@ -251,7 +250,7 @@
   // terminal
   {
     "command": "workbench.action.terminal.toggleTerminal",
-    "key": "alt+e"
+    "key": "alt+d"
   },
   {
     "command": "workbench.action.terminal.focusNext",
@@ -279,7 +278,7 @@
     "key": "alt+o",
   },
   {
-    "key": "alt+f",
+    "key": "alt+a",
     "command": "workbench.debug.action.toggleRepl"
   },
   // 📁 Explorer file operations (Vim-like)
@@ -453,24 +452,15 @@
   },
   // cursorhome and cursorend 
   {
-    "command": "cursorHome",
-    "key": "space h",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "key": "space e",
     "command": "vscode-neovim.send",
-    "args": "g$",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  {
-    "command": "cursorHome",
-    "key": "ctrl-i",
+    "args": "g^",
+    "key": "alt+e",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "key": "ctrl+shift+i",
-    "command": "cursorEnd",
+    "key": "alt+w",
+    "command": "vscode-neovim.send",
+    "args": "g$",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
@@ -487,25 +477,6 @@
     "command": "copyRelativeFilePath",
     "key": "space shift+p",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
-  // GOTO: Beofre & after postiong of cursor 
-  {
-    "command": "workbench.action.navigateBack",
-    "key": "alt+a"
-  },
-  {
-    "command": "workbench.action.navigateForward",
-    "key": "alt+d"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward",
-    "when": "canNavigateForward"
-  },
-  {
-    "key": "ctrl+alt+-",
-    "command": "-workbench.action.navigateBack",
-    "when": "canNavigateBack"
   },
   // multiline comment
   {
@@ -590,5 +561,5 @@
   {
     "key": "alt+/",
     "command": "workbench.action.chat.attachContext",
-  }
+  },
 ]
