@@ -353,7 +353,7 @@
   // hover functionality
   {
     "command": "editor.action.showHover",
-    "key": "alt+s",
+    "key": "alt+h",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
