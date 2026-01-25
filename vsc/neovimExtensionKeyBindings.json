@@ -586,5 +586,9 @@
     "key": "ctrl+backspace",
     "command": "deleteWordLeft",
     "when": "editorTextFocus && editorHasMultipleSelections"
+  },
+  {
+    "key": "alt+/",
+    "command": "workbench.action.chat.attachContext",
   }
 ]
