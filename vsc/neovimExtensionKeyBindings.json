@@ -148,7 +148,8 @@
   },
   {
     "command": "workbench.action.quickOpen",
-    "key": "ctrl+p",
+    "key": "space space",
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "s",
