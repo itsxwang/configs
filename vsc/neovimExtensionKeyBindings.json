@@ -139,8 +139,7 @@
   // manage files, tabs, windows etc  
   {
     "command": "workbench.action.showCommands",
-    "key": "space o",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+f",
   },
   {
     "command": "workbench.action.showAllEditors",
@@ -149,30 +148,16 @@
   },
   {
     "command": "workbench.action.quickOpen",
-    "key": "space space",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "ctrl+p",
   },
   {
     "key": "s",
     "command": "explorer.openToSide",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  {
-    "key": "shift-s",
-    "command": "runCommands",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
-    "args": {
-      "commands": [
-        "workbench.action.splitEditorDown",
-        "explorer.openAndPassFocus",
-        "workbench.action.closeOtherEditors"
-      ]
-    }
-  },
-  {
-    "key": "space t",
+  { 
+    "key": "alt+t", 
     "command": "workbench.action.reopenClosedEditor",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "workbench.action.splitEditorDown",
@@ -368,8 +353,7 @@
   // Open recent 
   {
     "command": "workbench.action.openRecent",
-    "key": "space r",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+r",
   },
   // ci shorcuts using <leader> 
   {
