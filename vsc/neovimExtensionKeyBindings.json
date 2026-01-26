@@ -378,12 +378,12 @@
     "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   // ── ci( / ci) ───────────────────────────────────────────────────
-  {
-    "args": "ci(",
-    "command": "vscode-neovim.send",
-    "key": "space shift+9",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
-  },
+  // {
+  //   "args": "ci(",
+  //   "command": "vscode-neovim.send",
+  //   "key": "space shift+9",
+  //   "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+  // },
   {
     "args": "ci)",
     "command": "vscode-neovim.send",
@@ -437,15 +437,13 @@
   },
   // cursorhome and cursorend 
   {
-    "command": "vscode-neovim.send",
-    "args": "g^",
+    "command": "cursorHome",
     "key": "alt+w",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "alt+e",
-    "command": "vscode-neovim.send",
-    "args": "g$",
+    "command": "cursorEnd",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
