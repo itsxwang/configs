@@ -60,4 +60,4 @@ keymap("n", "<leader>>", "ci>", opts)
 
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
-keymap('i', '<C-Right>', '<C-o>e',  { noremap = true, silent = true })
+keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })

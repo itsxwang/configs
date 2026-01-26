@@ -155,8 +155,8 @@
     "command": "explorer.openToSide",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  { 
-    "key": "alt+t", 
+  {
+    "key": "alt+q",
     "command": "workbench.action.reopenClosedEditor",
   },
   {
@@ -229,7 +229,7 @@
     "key": "ctrl+w",
   },
   {
-    "key": "ctrl+g",
+    "key": "ctrl+q",
     "command": "workbench.action.closeOtherEditors",
   },
   // terminal
@@ -438,11 +438,11 @@
   {
     "command": "vscode-neovim.send",
     "args": "g^",
-    "key": "alt+e",
+    "key": "alt+w",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "key": "alt+w",
+    "key": "alt+e",
     "command": "vscode-neovim.send",
     "args": "g$",
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
@@ -522,28 +522,13 @@
     "args": "<C-Right>",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
   },
-  // ------ Backspace enchance for vim-multi plugin -------
   // Remove any previous conflicting binding
-  {
-    "key": "ctrl+backspace",
-    "command": "-deleteWordLeft",
-    "when": "editorTextFocus"
-  },
-  // Forward to Neovim ONLY when in single insert (heuristic: !editorHasMultipleSelections)
-  {
-    "key": "ctrl+backspace",
-    "command": "vscode-neovim.send",
-    "args": "<C-w>",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert' && !editorHasMultipleSelections"
-  },
-  // Let VS Code handle multi-cursor insert mode
-  {
-    "key": "ctrl+backspace",
-    "command": "deleteWordLeft",
-    "when": "editorTextFocus && editorHasMultipleSelections"
-  },
   {
     "key": "alt+/",
     "command": "workbench.action.chat.attachContext",
   },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  }
 ]
