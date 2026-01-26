@@ -10,7 +10,7 @@
   },
   {
     "command": "workbench.action.navigateUp",
-    "key": "ctrl-k",
+    "key": "ctrl-k"
   },
   {
     "command": "workbench.action.navigateRight",
@@ -30,9 +30,7 @@
   {
     "key": "space f shift+q",
     "command": "vscode-neovim.send",
-    "args": [
-      ":q!\n"
-    ],
+    "args": [":q!\n"],
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   // 📄 Buffers (tabs)
@@ -59,7 +57,7 @@
   },
   {
     "key": "alt+s",
-    "command": "workbench.action.gotoSymbol",
+    "command": "workbench.action.gotoSymbol"
   },
   // 🧭 Go-to (LSP navigation)
   {
@@ -136,10 +134,10 @@
     "key": "space d q",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // manage files, tabs, windows etc  
+  // manage files, tabs, windows etc
   {
     "command": "workbench.action.showCommands",
-    "key": "alt+f",
+    "key": "alt+f"
   },
   {
     "command": "workbench.action.showAllEditors",
@@ -158,7 +156,7 @@
   },
   {
     "key": "alt+q",
-    "command": "workbench.action.reopenClosedEditor",
+    "command": "workbench.action.reopenClosedEditor"
   },
   {
     "command": "workbench.action.splitEditorDown",
@@ -227,11 +225,11 @@
   },
   {
     "command": "workbench.action.closeActiveEditor",
-    "key": "ctrl+w",
+    "key": "ctrl+w"
   },
   {
     "key": "ctrl+q",
-    "command": "workbench.action.closeOtherEditors",
+    "command": "workbench.action.closeOtherEditors"
   },
   // terminal
   {
@@ -254,14 +252,14 @@
     "command": "workbench.action.terminal.kill",
     "key": "alt+l"
   },
-  // 🚨 Problems panel (Diagnostics) 
+  // 🚨 Problems panel (Diagnostics)
   {
     "command": "workbench.actions.view.problems",
-    "key": "alt+m",
+    "key": "alt+m"
   },
   {
     "command": "workbench.action.output.toggleOutput",
-    "key": "alt+o",
+    "key": "alt+o"
   },
   {
     "key": "alt+a",
@@ -308,7 +306,7 @@
     "key": "ctrl+shift+m",
     "when": "workbench.panel.markers.view.active"
   },
-  // shortcut that should work like normal 
+  // shortcut that should work like normal
   {
     "command": "editor.action.formatDocument",
     "key": "shift+alt+f"
@@ -351,12 +349,12 @@
     "key": "space d v",
     "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // Open recent 
+  // Open recent
   {
     "command": "workbench.action.openRecent",
-    "key": "alt+r",
+    "key": "alt+r"
   },
-  // ci shorcuts using <leader> 
+  // ci shorcuts using <leader>
   {
     "args": "ci'",
     "command": "vscode-neovim.send",
@@ -435,7 +433,7 @@
     "key": "ctrl+e",
     "when": "neovim.mode !== 'normal'"
   },
-  // cursorhome and cursorend 
+  // cursorhome and cursorend
   {
     "command": "cursorHome",
     "key": "alt+w",
@@ -464,12 +462,12 @@
   // multiline comment
   {
     "key": "shift+alt+a",
-    "command": "editor.action.blockComment",
+    "command": "editor.action.blockComment"
   },
   // copilot inline
   {
     "key": "alt+g",
-    "command": "inlineChat.start",
+    "command": "inlineChat.start"
   },
   // send `:noh` command on alt+x
   {
@@ -519,12 +517,12 @@
     "key": "ctrl+right",
     "command": "vscode-neovim.send",
     "args": "<C-Right>",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
+    "when": "editorTextFocus && !inlineSuggestionVisible && neovim.init && neovim.mode == 'insert'"
   },
   // Remove any previous conflicting binding
   {
     "key": "alt+/",
-    "command": "workbench.action.chat.attachContext",
+    "command": "workbench.action.chat.attachContext"
   },
   {
     "key": "ctrl+q",
