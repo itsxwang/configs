@@ -86,8 +86,19 @@ co() {
   alias py='python3'
   alias inv='nvim $(fzf -m  --preview="batcat --color=always {}")'
   alias ll="ls -l"
-  alias weather="curl wttr.in"
+  alias weather="curl wttr.com"
   alias nv="nvim"
+  
+  alias gs='git status'
+  alias ga='git add .'
+  alias gc='git commit -m'
+  alias gp='git push'
+  alias gl='git log --oneline --color=always | head -n 10'
+  alias gca='git commit --amend'
+  alias gcan='git commit --amend --no-edit'
+
+  alias ..='cd ..'
+  alias ...='cd ../..'
 
   # Defer slow integrations until after prompt is shown
   function load-slow-integrations() {
