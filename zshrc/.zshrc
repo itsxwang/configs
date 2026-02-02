@@ -93,6 +93,7 @@ co() {
   alias ga='git add --all'
   alias gc='git commit -m'
   alias gp='git push'
+  alias gpf='git push --force-with-lease'
   alias gl='git log --oneline --color=always | head -n 10'
   alias gca='git commit --amend'
   alias gcan='git commit --amend --no-edit'
