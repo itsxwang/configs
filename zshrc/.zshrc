@@ -90,7 +90,7 @@ co() {
   alias nv="nvim"
   
   alias gs='git status'
-  alias ga='git add .'
+  alias ga='git add --all'
   alias gc='git commit -m'
   alias gp='git push'
   alias gl='git log --oneline --color=always | head -n 10'
