@@ -537,4 +537,14 @@
     "args": "/\\%<C-r>=line('.')<CR>l",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
+  {
+    "key": "shift+right",
+    "command": "cursorColumnSelectRight",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
+  },
+  {
+    "key": "shift+left",
+    "command": "cursorColumnSelectLeft",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
+  }
 ]
