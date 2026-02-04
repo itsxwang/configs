@@ -447,19 +447,19 @@
     "when": "editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
-    "key": "alt-y",
+    "key": "alt-t",
     "command": "workbench.action.files.newUntitledFile"
   },
   // path
   {
     "command": "copyFilePath",
-    "key": "space p",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+p",
+    "when": "editorTextFocus || filesExplorerFocus && !inQuickOpen && !terminalFocus"
   },
   {
     "command": "copyRelativeFilePath",
-    "key": "space shift+p",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+shift+p",
+    "when": "editorTextFocus || filesExplorerFocus && !inQuickOpen && !terminalFocus"
   },
   // multiline comment
   {
@@ -546,5 +546,42 @@
     "key": "shift+left",
     "command": "cursorColumnSelectLeft",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
-  }
+  },
+  // match whole word, use regex, preserve case shortcuts
+  {
+    "key": "alt+u",
+    "command": "toggleFindWholeWord",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "toggleFindRegex",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+y",
+    "command": "togglePreserveCase",
+    "when": "editorFocus"
+  },
+  // for search editor ( --same-- )
+  {
+    "key": "alt+y",
+    "command": "toggleSearchPreserveCase",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "toggleSearchRegex",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "alt+u",
+    "command": "toggleSearchWholeWord",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.replaceInFiles",
+    "when": "searchViewletFocus"
+  },
 ]
