@@ -101,6 +101,9 @@ co() {
   alias ..='cd ..'
   alias ...='cd ../..'
 
+  alias xc="xclip -selection clipboard"
+  alias obs="flatpak run com.obsproject.Studio & disown"  
+
   # Defer slow integrations until after prompt is shown
   function load-slow-integrations() {
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -120,7 +123,5 @@ yt() {
   query=$(printf '%s ' "$@" | sed 's/ /+/g')
   xdg-open "https://www.youtube.com/results?search_query=$query" >/dev/null 2>&1
 }
-
-alias obs="flatpak run com.obsproject.Studio & disown"  
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet 
