@@ -1,5 +1,5 @@
-// 🔑 Navigation (hjkl-style panels)
 [
+  // 🔑 Navigation (hjkl-style panels)
   {
     "command": "workbench.action.navigateLeft",
     "key": "ctrl-h"
@@ -31,7 +31,7 @@
     "key": "space f shift+q",
     "command": "vscode-neovim.send",
     "args": [":q!\n"],
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   // 📄 Buffers (tabs)
   {
@@ -80,11 +80,10 @@
     "key": "space g i",
     "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
-  // 🔍 Search
+  // 🔍 Search (Updated to alt+y)
   {
     "command": "workbench.action.findInFiles",
-    "key": "space s g",
-    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "key": "alt+y"
   },
   // 🌱 Git (use this command for something else because we usually use git from terminal)
   {
@@ -161,42 +160,42 @@
   {
     "command": "workbench.action.splitEditorDown",
     "key": "space s d",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "workbench.action.splitEditorRight",
     "key": "space s r",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "workbench.action.splitEditorLeft",
     "key": "space s l",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "workbench.action.splitEditorUp",
     "key": "space s u",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "space m u",
     "command": "workbench.action.moveEditorToAboveGroup",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "space m d",
     "command": "workbench.action.moveEditorToBelowGroup",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "space m r",
     "command": "workbench.action.moveEditorToRightGroup",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "key": "space m l",
     "command": "workbench.action.moveEditorToLeftGroup",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "workbench.action.increaseViewWidth",
@@ -342,12 +341,12 @@
   {
     "command": "editor.action.increaseHoverVerbosityLevel",
     "key": "space i v",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   {
     "command": "editor.action.decreaseHoverVerbosityLevel",
     "key": "space d v",
-    "when": "neovim.mode == 'normal' && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
+    "when": "neovim.mode == 'normal' && editorTextFocus && !terminalFocus && !filesExplorerFocus && !inQuickOpen"
   },
   // Open recent
   {
@@ -545,36 +544,17 @@
     "command": "cursorColumnSelectLeft",
     "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'"
   },
-  // match whole word, use regex, preserve case shortcuts
-  {
-    "key": "alt+u",
-    "command": "toggleFindWholeWord",
-    "when": "editorFocus"
-  },
+  // match whole  use regex, preserve case shortcuts
   {
     "key": "alt+i",
     "command": "toggleFindRegex",
     "when": "editorFocus"
   },
-  {
-    "key": "alt+y",
-    "command": "togglePreserveCase",
-    "when": "editorFocus"
-  },
+  // NOTE: 'alt+y' is used for findInFiles above, so we disable it here for togglePreserveCase & when search boxes are focus it automatically using default keys for search dialog, until it closed, so we don't need different keys for search dialogs
   // for search editor ( --same-- )
-  {
-    "key": "alt+y",
-    "command": "toggleSearchPreserveCase",
-    "when": "searchViewletFocus"
-  },
   {
     "key": "alt+i",
     "command": "toggleSearchRegex",
-    "when": "searchViewletFocus"
-  },
-  {
-    "key": "alt+u",
-    "command": "toggleSearchWholeWord",
     "when": "searchViewletFocus"
   },
   {
