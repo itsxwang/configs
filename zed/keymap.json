@@ -1,0 +1,159 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w ctrl-w": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-q": "pane::ReopenClosedItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-d": "terminal_panel::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-n": "workspace::NewTerminal",
+    },
+  },
+  {
+    "context": "((os != macos && Editor) && edit_prediction_conflict)",
+    "bindings": {
+      "ctrl-right": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "((FileFinder || FileFinder > Picker > Editor) || FileFinder > Picker > menu)",
+    "bindings": {
+      "ctrl-f": "pane::SplitLeft",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-h": "editor::Hover",
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "alt-s": "project_symbols::Toggle",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space (": ["workspace::SendKeystrokes", "c i ("],
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space (": ["workspace::SendKeystrokes", "c i ("],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space )": ["workspace::SendKeystrokes", "c i )"],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-k": "editor::DuplicateLineUp",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-j": "editor::DuplicateLineDown",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "alt-w": ["workspace::SendKeystrokes", "^"],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "alt-e": ["workspace::SendKeystrokes", "$"],
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-r": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-l": "pane::CloseActiveItem"
+    }
+  }
+]
