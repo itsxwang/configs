@@ -101,7 +101,8 @@ co() {
   alias ..='cd ..'
   alias ...='cd ../..'
 
-  alias xc="xclip -selection clipboard"
+  alias wx="wl-copy"
+  alias wp="wl-paste"
   alias obs="flatpak run com.obsproject.Studio & disown"  
   alias t="tmux attach || tmux new"
   alias tm="tmux"
