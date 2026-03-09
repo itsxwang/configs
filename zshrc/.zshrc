@@ -103,6 +103,8 @@ co() {
 
   alias xc="xclip -selection clipboard"
   alias obs="flatpak run com.obsproject.Studio & disown"  
+  alias t="tmux attach || tmux new"
+  alias tm="tmux"
 
   # Defer slow integrations until after prompt is shown
   function load-slow-integrations() {

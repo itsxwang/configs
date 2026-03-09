@@ -146,14 +146,14 @@
         "projects::OpenRecent",
         {
           "create_new_window": false
-        }
+        } 
       ]
-    }
+    } 
   },
   {
     "context": "Terminal",
     "bindings": {
       "alt-l": "pane::CloseActiveItem"
-    }
+    } 
   }
 ]
