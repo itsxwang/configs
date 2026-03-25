@@ -57,6 +57,8 @@ keymap("n", "<leader>]", "ci]", opts)
 keymap("n", "<leader><", "ci<", opts)
 keymap("n", "<leader>>", "ci>", opts)
 
+-- format code
+vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format)
 
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
