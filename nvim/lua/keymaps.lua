@@ -38,6 +38,9 @@ map("n", "<leader>lf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format code" })
 
+-- format code
+map("n", "<leader>fc", vim.lsp.buf.hover, { desc = "Format code" })
+
 -- ✏️ `ci` placements with leader key
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -58,7 +61,14 @@ keymap("n", "<leader><", "ci<", opts)
 keymap("n", "<leader>>", "ci>", opts)
 
 -- format code
-vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format)
+keymap("n", "<leader>fc", vim.lsp.buf.format)
+
+-- copy down
+keymap('n', 'Y', 'yyp', opts)
+keymap("v", "Y", function()
+  vim.api.nvim_feedkeys("y`>p", "n", false)
+end, opts)
+keymap('n', '<A-x>', ':nohlsearch<CR>', opts)
 
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
