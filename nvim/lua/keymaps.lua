@@ -72,6 +72,7 @@ end, opts)
 
 -- noh
 keymap('n', '<A-x>', ':nohlsearch<CR>', opts)
+keymap({'n', 'i'}, '<C-k>', vim.lsp.buf.hover, opts)
 
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
