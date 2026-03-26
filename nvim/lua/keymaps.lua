@@ -32,8 +32,9 @@ map("n", "<leader>d", '"_d', { desc = "Delete without yank" })
 -- 🧠 LSP (built-in)
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename symbol" })
 map("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
-map("n", "<leader>ld", vim.lsp.buf.definition, { desc = "Go to definition" })
-map("n", "<leader>lh", vim.lsp.buf.hover, { desc = "Hover docs" })
+map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+map("n", "<A-h>", vim.lsp.buf.hover, { desc = "Hover docs" })
+map("i", "<A-h>", vim.lsp.buf.hover, { desc = "Hover docs" })
 map("n", "<leader>lf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format code" })
@@ -68,6 +69,8 @@ keymap('n', 'Y', 'yyp', opts)
 keymap("v", "Y", function()
   vim.api.nvim_feedkeys("y`>p", "n", false)
 end, opts)
+
+-- noh
 keymap('n', '<A-x>', ':nohlsearch<CR>', opts)
 
 -- Insert mode word navigation
