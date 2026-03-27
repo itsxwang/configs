@@ -74,6 +74,23 @@ end, opts)
 keymap('n', '<A-x>', ':nohlsearch<CR>', opts)
 keymap({'n', 'i'}, '<C-k>', vim.lsp.buf.hover, opts)
 
+-- compile c code shortcut
+keymap("n", "<leader>rc", function()
+ vim.cmd("w")
+
+  local file = vim.fn.expand("%")
+  local output = vim.fn.expand("%:r")
+
+  local cmd = string.format(
+    "gcc %s -Wall -Wextra -std=gnu11 -o %s && ./%s",
+    file,
+    output,
+    output
+  )
+
+  vim.cmd("botright split | terminal " .. cmd)
+end, { silent = true })
+
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
 keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })
