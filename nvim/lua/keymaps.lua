@@ -106,6 +106,20 @@ end, { silent = true })
 
 keymap("v", "<C-A-a>", "gb", { remap = true })
 
+-- Open TODO list (Telescope)
+vim.keymap.set("n", "<leader>tt", "<cmd>TodoQuickFix<cr>", { silent = true })
+
+-- Jump to next TODO
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { silent = true })
+
+-- Jump to previous TODO
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { silent = true })
+
+
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
 keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })
