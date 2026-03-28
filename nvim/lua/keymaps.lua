@@ -91,6 +91,21 @@ keymap("n", "<leader>rc", function()
   vim.cmd("botright split | terminal " .. cmd)
 end, { silent = true })
 
+-- comment 
+keymap("n", "<C-_>", function()
+  require("Comment.api").toggle.linewise.current()
+end, { silent = true })
+
+keymap("v", "<C-_>", function()
+  require("Comment.api").toggle.linewise(vim.fn.visualmode())
+end, { silent = true })
+
+keymap("n", "<C-A-a>", function()
+  require("Comment.api").toggle.blockwise.current()
+end, { silent = true })
+
+keymap("v", "<C-A-a>", "gb", { remap = true })
+
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
 keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })
