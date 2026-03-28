@@ -119,6 +119,8 @@ vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { silent = true })
 
+-- select all 
+keymap("n","<C-A>", "ggVG")
 
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
