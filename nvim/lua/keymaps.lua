@@ -96,26 +96,24 @@ keymap("n", "<C-_>", function()
   require("Comment.api").toggle.linewise.current()
 end, { silent = true })
 
-keymap("v", "<C-_>", function()
-  require("Comment.api").toggle.linewise(vim.fn.visualmode())
-end, { silent = true })
+keymap("x", "<C-_>", "gcgv", { remap = true, silent = true })
 
 keymap("n", "<C-A-a>", function()
   require("Comment.api").toggle.blockwise.current()
 end, { silent = true })
 
-keymap("v", "<C-A-a>", "gb", { remap = true })
+keymap("v", "<C-A-a>", "gbgv", { remap = true })
 
 -- Open TODO list (Telescope)
 vim.keymap.set("n", "<leader>tt", "<cmd>TodoQuickFix<cr>", { silent = true })
 
 -- Jump to next TODO
-vim.keymap.set("n", "]t", function()
+keymap("n", "]t", function()
   require("todo-comments").jump_next()
 end, { silent = true })
 
 -- Jump to previous TODO
-vim.keymap.set("n", "[t", function()
+keymap("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { silent = true })
 
