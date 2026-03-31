@@ -123,3 +123,6 @@ keymap("n","<C-A>", "ggVG")
 -- Insert mode word navigation
 keymap('i', '<C-Left>',  '<C-o>b',  { noremap = true, silent = true })
 keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })
+
+-- go up in e, and cursor be on new uppermost line
+keymap('i', '<C-k>', '<ESC>O', { noremap = true })
