@@ -128,3 +128,5 @@ yt() {
 }
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet 
+eval "$(zoxide init zsh)"
+
