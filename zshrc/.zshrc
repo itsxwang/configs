@@ -106,6 +106,16 @@ co() {
   alias obs="flatpak run com.obsproject.Studio & disown"  
   alias t="tmux attach || tmux new"
   alias tm="tmux"
+  alias yz="yazi"
+
+function y() {
+  local tmp="$(mktemp -t yazi-cwd.XXXXXX)"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    cd "$cwd"
+  fi
+  rm -f "$tmp"
+}
 
   # Defer slow integrations until after prompt is shown
   function load-slow-integrations() {
