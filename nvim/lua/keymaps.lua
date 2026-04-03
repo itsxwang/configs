@@ -97,23 +97,19 @@ keymap("n", "<C-_>", function()
 end, { silent = true })
 
 -- Single line toggle in Insert Mode
+-- Single line toggle in Insert Mode
 vim.keymap.set("i", "<C-_>", function()
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     local line_content = vim.api.nvim_get_current_line()
 
-    -- 1. Toggle the comment
     require("Comment.api").toggle.linewise.current()
 
-    -- 2. Handle cursor placement
     if line_content:match("^%s*$") then
-        -- Move to end of line ($), then enter Insert Mode (a) 
-        -- This naturally puts you one space after the //
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("$a", true, false, true), "n", true)
+        vim.cmd("startinsert!")
     else
-        -- Restore exact position for lines with existing text
         vim.api.nvim_win_set_cursor(0, cursor_pos)
     end
-end, { silent = true, desc = "Toggle comment with VSCode-style spacing" })
+end, { silent = true })
 
 keymap("x", "<C-_>", "gcgv", { remap = true, silent = true })
 
