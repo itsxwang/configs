@@ -126,3 +126,6 @@ keymap('i', '<C-Right>', '<C-o>e<Right>',  { noremap = true, silent = true })
 
 -- go up in e, and cursor be on new uppermost line
 keymap('i', '<C-k>', '<ESC>O', { noremap = true })
+
+-- alt+d click for multi cursor
+keymap("n", "<A-d>", "<Plug>(VM-Mouse-Cursor)", {})
